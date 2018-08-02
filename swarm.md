@@ -18,7 +18,7 @@ run06      run15
 run07      run16
 run08      run17
 
-[me@biowulf ~]$ more run00
+[me@biowulf ~]$ more run01
 #!/bin/sh
 module load samtools
 module load R
@@ -28,11 +28,11 @@ R --no-save < master.R --args nodeID=1
 Submit all 20 jobs:
 
 ```
-[me@biowulf ~]$ sbatch run00
-6077144
 [me@biowulf ~]$ sbatch run01
-6077145
+6077144
 [me@biowulf ~]$ sbatch run02
+6077145
+[me@biowulf ~]$ sbatch run03
 6077147
 .
 .
@@ -47,13 +47,13 @@ Check run status:
 [me@biowulf ~]$ sjobs
 User     JobId     JobName  Part  St  Reason  Runtime  Walltime  Nodes  CPUs  Memory    
 ========================================================================================
-me       6077144   run00    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
-me       6077145   run00    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
-me       6077147   run00    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
+me       6077144   run01    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
+me       6077145   run02    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
+me       6077147   run03    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
 .
 .
 .
-me       6077168   run00    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
+me       6077168   run20    norm  PD  ---        0:00   2:00:00      1     2  1GB/node                      
 ========================================================================================
 cpus running = 0
 cpus queued = 20
@@ -137,7 +137,7 @@ runAll.swarm
 [me@biowulf ~]$ wc -l runAll.swarm
 10000 runAll.swarm
 
-[me@biowulf ~]$ swarm -f runAll.swarm -b 50
+[me@biowulf ~]$ swarm -f runAll.swarm -b 50 --module samtools,R
 6077356
 ```
 
