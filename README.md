@@ -6,6 +6,6 @@ The initial Programmer's Corner seminar was held on August 2, 2018. Chances are 
 * Parallel computing strategies (updated lecture notes coming soon): an overview of different strategies for parallelizing your code with examples in several different programming languages. -Eckart Bindewald
  
 ### Lightning talks:
-* SLURM on Moab (updated lecture notes coming soon): An introduction to some changes coming to the Frederick HPC environment. These tips will work on Biowulf, too. -[Ravi Ravichandran](https://github.com/ravichas)
+* [SLURM on Moab](SLURM_08012018.pdf): An introduction to some changes coming to the Frederick HPC environment. These tips will work on Biowulf, too. -[Ravi Ravichandran](https://github.com/ravichas)
  
 * [Swarm on Biowulf](swarm.md): A brief overview of running swarms of jobs on Biowulf. -[Randy Johnson](https://github.com/johnsonra)
